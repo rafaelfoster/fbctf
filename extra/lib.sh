@@ -331,7 +331,7 @@ function import_empty_db() {
     PASSWORD=$(head -c 500 /dev/urandom | md5sum | cut -d" " -f1)
   fi
 
-  set_password "$PASSWORD" "$__user" "$__pwd" "$__db" "$__path" "$__multiservers"
+  set_password "fbctf_password" "$__user" "$__pwd" "$__db" "$__path" "$__multiservers"
 
   print_blank_lines
   ok_log "The password for admin is: $PASSWORD"
